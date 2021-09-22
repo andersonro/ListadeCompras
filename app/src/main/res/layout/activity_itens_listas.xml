@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.ItensListasActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_itens_listas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/layout_half_padding">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/cl_itens_listas"
+            app:layout_constraintStart_toStartOf="@id/cl_itens_listas"
+            app:layout_constraintEnd_toEndOf="@id/cl_itens_listas"
+            app:title="@string/title_layout_item_list"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_itens_listas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/cl_total"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.0"
+            tools:itemCount="6"
+            tools:listitem="@layout/card_itens_listas" />
+
+        <TextView
+            android:id="@+id/tv_title_empty_listas"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_empty_itens_list"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="@id/cl_itens_listas"
+            app:layout_constraintEnd_toEndOf="@id/cl_itens_listas"
+            app:layout_constraintBottom_toBottomOf="@id/cl_itens_listas"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:paddingTop="@dimen/layout_half_padding"
+            android:paddingBottom="@dimen/layout_half_padding"
+            app:layout_constraintBottom_toBottomOf="@id/cl_itens_listas"
+            app:layout_constraintStart_toStartOf="@id/cl_itens_listas"
+            app:layout_constraintEnd_toEndOf="@id/cl_itens_listas">
+
+            <TextView
+                android:id="@+id/tv_itens_listas_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/cl_total"
+                app:layout_constraintEnd_toStartOf="@id/tv_itens_listas_total_valor"
+                app:layout_constraintBottom_toBottomOf="@id/cl_total"
+                app:layout_constraintTop_toTopOf="@id/cl_total"
+                android:textColor="@color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="TOTAL"
+                />
+
+            <TextView
+                android:id="@+id/tv_itens_listas_total_valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_itens_listas_total"
+                app:layout_constraintEnd_toEndOf="@+id/cl_total"
+                app:layout_constraintTop_toTopOf="@id/tv_itens_listas_total"
+                app:layout_constraintBottom_toBottomOf="@id/tv_itens_listas_total"
+                android:textColor="@color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                tools:text="R$ 50,00"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_itens_listas_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_half_padding"
+            android:layout_marginRight="@dimen/layout_half_padding"
+            android:backgroundTint="@color/purple_700"
+            app:tint="@color/white"
+            android:src="@drawable/ic_add"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/cl_itens_listas"
+            app:layout_constraintEnd_toEndOf="@id/cl_itens_listas"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Lista de Compras</string>
+    <string name="title_empty_list">Você não possui nenhuma lista cadastrada.</string>
+    <string name="title_empty_itens_list">Você não possui nenhuma item na lista cadastrada.</string>
+    <string name="toolbar_listas_edit">Alteração de listas</string>
+    <string name="toolbar_listas_add">Cadastro de listas</string>
+    <string name="btn_title_listas_save">Salvar</string>
+    <string name="btn_deletar">Deletar</string>
+    <string name="message_dtcadastro_error">Data invalida!</string>
+    <string name="message_description_error">Descrição invalida!</string>
+    <string name="message_register_sucess">Registro salvo com sucesso!</string>
+    <string name="message_deletar_sucess">Registro deletado com sucesso!</string>
+    <string name="et_title_date">Data da lista de compra</string>
+    <string name="et_title_description">Descrição</string>
+    <string name="title_layout_item_list">Lista de itens</string>
+    <string name="til_title_item_lista_price">Valor</string>
+    <string name="til_title_item_lista_qtd">Quantidade</string>
+    <string name="title_symbol_currecy">R$</string>
+    <string name="title_activity_itens_list">Itens da Lista</string>
+    <string name="toolbar_title_itens_lista_edit">Alteração do item</string>
+    <string name="toolbar_title_itens_lista_add">Cadastro do item</string>
+</resources>

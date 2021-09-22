@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/listasLayoutActivity"
+    tools:context=".ui.ListasActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_listas"
+        android:padding="@dimen/layout_half_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_listas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/cl_listas"
+            app:layout_constraintStart_toStartOf="@id/cl_listas"
+            app:layout_constraintEnd_toEndOf="@id/cl_listas"
+            app:title="@string/app_name"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_listas_dtcadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/et_title_date"
+            app:startIconDrawable="@drawable/ic_calendar"
+            android:layout_marginTop="@dimen/layout_half_padding"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_listas"
+            app:layout_constraintStart_toStartOf="@id/cl_listas"
+            app:layout_constraintEnd_toEndOf="@id/cl_listas">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:focusable="false"
+                android:maxLength="10"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_listas_descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/et_title_description"
+            android:layout_marginTop="@dimen/layout_half_padding"
+            app:layout_constraintTop_toBottomOf="@id/til_listas_dtcadastro"
+            app:layout_constraintStart_toStartOf="@id/cl_listas"
+            app:layout_constraintEnd_toEndOf="@id/cl_listas"
+            app:counterEnabled="true"
+            app:counterMaxLength="200">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="200"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_listas_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_extra_padding"
+            android:text="@string/btn_title_listas_save"
+            app:layout_constraintTop_toBottomOf="@id/til_listas_descricao"
+            app:layout_constraintStart_toStartOf="@id/cl_listas"
+            app:layout_constraintEnd_toEndOf="@id/cl_listas" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_listas_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/layout_extra_padding"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="@string/btn_deletar"
+            app:layout_constraintTop_toBottomOf="@id/btn_listas_save"
+            app:layout_constraintStart_toStartOf="@id/cl_listas"
+            app:layout_constraintEnd_toEndOf="@id/cl_listas" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

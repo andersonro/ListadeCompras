@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.ItensListaRegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/layout_half_padding">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/cl_main"
+            app:layout_constraintStart_toStartOf="@+id/cl_main"
+            app:layout_constraintEnd_toEndOf="@+id/cl_main"
+            app:title="Título"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_itens_listas_descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/et_title_description"
+            android:layout_marginTop="@dimen/layout_half_padding"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="@id/cl_main"
+            app:layout_constraintEnd_toEndOf="@id/cl_main"
+            app:counterEnabled="true"
+            app:counterMaxLength="200">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="200"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_itens_listas_qtd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/til_title_item_lista_qtd"
+            android:layout_marginTop="@dimen/layout_half_padding"
+            app:layout_constraintTop_toBottomOf="@id/til_itens_listas_descricao"
+            app:layout_constraintStart_toStartOf="@id/cl_main"
+            app:layout_constraintEnd_toStartOf="@+id/til_itens_listas_valor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_itens_listas_valor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/til_title_item_lista_price"
+            app:layout_constraintTop_toTopOf="@id/til_itens_listas_qtd"
+            app:layout_constraintStart_toEndOf="@id/til_itens_listas_qtd"
+            app:layout_constraintEnd_toEndOf="@+id/cl_main"
+            app:layout_constraintBottom_toBottomOf="@id/til_itens_listas_qtd">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_itens_listas_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_extra_padding"
+            android:text="@string/btn_title_listas_save"
+            app:layout_constraintTop_toBottomOf="@id/til_itens_listas_qtd"
+            app:layout_constraintStart_toStartOf="@id/cl_main"
+            app:layout_constraintEnd_toEndOf="@id/cl_main" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_itens_listas_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/layout_extra_padding"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="@string/btn_deletar"
+            app:layout_constraintTop_toBottomOf="@id/btn_itens_listas_save"
+            app:layout_constraintStart_toStartOf="@id/cl_main"
+            app:layout_constraintEnd_toEndOf="@id/cl_main" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
