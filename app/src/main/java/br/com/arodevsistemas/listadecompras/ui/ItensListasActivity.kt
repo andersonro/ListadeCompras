@@ -65,7 +65,6 @@ class ItensListasActivity : AppCompatActivity() {
         }
 
         adapter.listenerCheckbox = {
-            Log.e("CHECKBOX", it.toString())
             viewModel.saveItensListas(it)
         }
 
@@ -113,10 +112,7 @@ class ItensListasActivity : AppCompatActivity() {
                         }
                     }
 
-                    val totalFormat:Double = String.format("%.2f", total).toDouble()
-                    binding.tvItensListasTotalValor.text = "R$ ${totalFormat}"
-
-
+                    binding.tvItensListasTotalValor.text = total.formatCurrency()
                     adapter.submitList(it.value)
                 }
             }

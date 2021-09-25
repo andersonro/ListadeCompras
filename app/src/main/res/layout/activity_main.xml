@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/main_toobar"
             android:layout_width="match_parent"
@@ -54,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/layout_half_padding"
             android:layout_marginRight="@dimen/layout_half_padding"
-            android:backgroundTint="@color/purple_700"
+            android:backgroundTint="@color/teal_200"
             app:tint="@color/white"
             android:src="@drawable/ic_add"
             android:tint="@color/white"

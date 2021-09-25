@@ -18,11 +18,14 @@ interface ItensListasDao {
     fun getById(id: Long) : Flow<ItensListas>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(itensListas: ItensListas) : Long
+    suspend fun insert(itensListas: ItensListas) : Long
 
     @Update
-    fun update(itensListas: ItensListas)
+    suspend fun update(itensListas: ItensListas)
 
     @Delete
-    fun delete(itensListas: ItensListas)
+    suspend fun delete(itensListas: ItensListas)
+
+    @Query("DELETE FROM tb_itens_listas WHERE id_listas = :idListas")
+    fun deleteItensListas(idListas: Long)
 }

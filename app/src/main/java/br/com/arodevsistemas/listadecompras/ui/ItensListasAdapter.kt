@@ -11,6 +11,7 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import br.com.arodevsistemas.listadecompras.core.extensions.formatCurrency
 import br.com.arodevsistemas.listadecompras.core.extensions.text
 import br.com.arodevsistemas.listadecompras.data.model.ItensListas
 import br.com.arodevsistemas.listadecompras.databinding.CardItensListasBinding
@@ -34,15 +35,12 @@ class ItensListasAdapter(
                 0.0
             }
 
-            val totalItemFormat:Double = String.format("%.2f", itemTotal).toDouble()
-
             binding.tvItensListasDescription.text = itensListas.descricao
             binding.tilListasQtd.text = itensListas.quantidade.toString()
             binding.tilListasValor.text = itensListas.valor.toString()
-            binding.tvItensListasTotalItemValor.text = totalItemFormat.toString()
+            binding.tvItensListasTotalItemValor.text = itemTotal.formatCurrency()
 
             if (itensListas.status=="C"){
-                binding.tvItensListasDescription.paintFlags = (binding.tvItensListasDescription.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG)
                 binding.cbItem.isChecked = true
                 binding.tilListasQtd.isEnabled = false
                 binding.tilListasValor.isEnabled = false

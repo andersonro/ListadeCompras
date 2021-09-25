@@ -12,5 +12,7 @@ interface ItensListasRepository {
 
     suspend fun delete(itensListas: ItensListas)
 
+    suspend fun deleteItensListas(idLIstas: Long)
+
     suspend fun getItensListasById(id: Long): Flow<List<ItensListas>>
 }

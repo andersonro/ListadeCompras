@@ -16,7 +16,7 @@ object DomainModule {
         return module {
             factory { ListasUseCase(get()) }
             factory { SaveListasUseCase(get()) }
-            factory { DeleteListsUseCase(get()) }
+            factory { DeleteListsUseCase(get(), get()) }
             factory { ListasByIdUseCase(get()) }
             factory { ItensListasUseCase(get()) }
             factory { SaveItensListasUseCase(get()) }

@@ -60,7 +60,7 @@
             android:id="@+id/tv_itens_listas_total_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_symbol_currecy"
+            android:text="@string/itens_lista_total"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintTop_toBottomOf="@+id/cb_item"
             app:layout_constraintStart_toStartOf="@id/cb_item"

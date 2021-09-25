@@ -22,7 +22,7 @@ fun View.hideSoftKeyboard() {
 }
 
 fun Double.formatCurrency(locale: Locale = Locale.getDefault()): String {
-    return NumberFormat.getCurrencyInstance(locale).format(this)
+    return NumberFormat.getCurrencyInstance().format(this)
 }
 
 fun String.formatDateStr(dateString: Date): String {

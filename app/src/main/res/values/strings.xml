@@ -19,4 +19,5 @@
     <string name="title_activity_itens_list">Itens da Lista</string>
     <string name="toolbar_title_itens_lista_edit">Alteração do item</string>
     <string name="toolbar_title_itens_lista_add">Cadastro do item</string>
+    <string name="itens_lista_total">Total do item:</string>
 </resources>

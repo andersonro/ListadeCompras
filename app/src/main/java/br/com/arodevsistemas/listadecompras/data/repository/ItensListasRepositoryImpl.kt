@@ -42,6 +42,16 @@ class ItensListasRepositoryImpl(private val appDatabase: AppDatabase): ItensList
             }
         }
 
+    override suspend fun deleteItensListas(idLIstas: Long) {
+        withContext(Dispatchers.IO){
+            try {
+                dao.deleteItensListas(idLIstas)
+            } catch (e: Exception) {
+                e
+            }
+        }
+    }
+
     override suspend fun getItensListasById(id: Long): Flow<List<ItensListas>> =
         withContext(Dispatchers.IO){
             try {
